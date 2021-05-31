@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>com.vitexsoftware.repo.apt_source</id>
+  
+  <name>VitexSoftware &apos;s Debian repository</name>
+  <summary>Software mostly</summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>AML</project_license>
+  
+  <extends>
+    <id>com.vitexsoftware.repo</id>
+  </extends>
+  
+  <description>
+    <p>
+      APT source for software provided (not only) VitexSoftware
+    </p>
+  </description>
+  
+  <icon type="stock">apt-repo-vitexsoftware</icon>
+</component>
+

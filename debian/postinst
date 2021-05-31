@@ -1,0 +1,51 @@
+#!/bin/sh
+# postinst script for apt-repo-suryorg
+#
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+
+case "$1" in
+    configure)
+
+    case $(lsb_release -is) in
+#	Ubuntu)
+#	    add-apt-repository -y ppa:vitex/php
+#        ;;
+	Ubuntu|Debian|Raspbian)
+ 	 wget -O /etc/apt/trusted.gpg.d/vitexsoftware.gpg http://repo.vitexsoftware.cz/keyring.gpg
+	 sh -c 'echo "deb http://repo.vitexsoftware.cz  $(lsb_release -sc) main" > /etc/apt/sources.list.d/vitexsoftware.list'
+        ;;
+	*)
+            echo "Unsupported distro $(lsb_release -is) " >&2
+	    exit 1
+        ;;
+    esac
+     apt update 
+
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+
+exit 0

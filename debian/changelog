@@ -1,0 +1,13 @@
+apt-repo-vitexsoftware (0.1) UNRELEASED; urgency=medium
+
+  * Icon and appstream metadata added
+  * Ubuntu support added
+  * Raspbian support added
+
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Mon, 31 May 2021 13:48:56 +0200
+
+apt-repo-suryorg (0.1) Experimental; urgency=medium
+
+  * Initial release.
+
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Sat, 20 Feb 2021 22:33:12 +0100
