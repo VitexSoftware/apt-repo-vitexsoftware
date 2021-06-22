@@ -26,8 +26,8 @@ case "$1" in
 #	    add-apt-repository -y ppa:vitex/php
 #        ;;
 	Ubuntu|Debian|Raspbian)
- 	 wget -O /etc/apt/trusted.gpg.d/vitexsoftware.gpg http://repo.vitexsoftware.cz/keyring.gpg
-	 sh -c 'echo "deb http://repo.vitexsoftware.cz  $(lsb_release -sc) main" > /etc/apt/sources.list.d/vitexsoftware.list'
+ 	 wget -O /usr/share/keyrings/vitexsoftware.gpg http://repo.vitexsoftware.cz/keyring.gpg
+	 sh -c 'echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg]  http://repo.vitexsoftware.cz  $(lsb_release -sc) main" > /etc/apt/sources.list.d/vitexsoftware.list'
         ;;
 	*)
             echo "Unsupported distro $(lsb_release -is) " >&2
