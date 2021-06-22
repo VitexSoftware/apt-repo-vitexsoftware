@@ -1,3 +1,5 @@
+![Logo](apt-repo-vitexsoftware.svg?raw=true)
+
 VitexSoftware's repository source
 =================================
 
