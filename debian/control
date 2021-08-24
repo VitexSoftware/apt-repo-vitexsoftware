@@ -2,12 +2,12 @@ Source: apt-repo-vitexsoftware
 Section: devel
 Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), wget,lsb-release
 Standards-Version: 4.3.0
 Homepage: https://deb.sury.org/
 
 Package: apt-repo-vitexsoftware
 Architecture: all
-Depends: ${misc:Depends},bash|dash,curl,apt,lsb-release, software-properties-common,wget
+Depends: ${misc:Depends},bash|dash,curl,apt, software-properties-common,wget
 Description: apt sources for additional VitexSoftware packages
  Add VitexSoftware debian repository into your Debian/Raspbian/Ubuntu
