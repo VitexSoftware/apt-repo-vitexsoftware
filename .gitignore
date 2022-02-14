@@ -1,0 +1,8 @@
+debian/.debhelper
+debian/apt-repo-vitexsoftware
+debian/tmp
+debian/apt-repo-vitexsoftware.debhelper.log
+debian/apt-repo-vitexsoftware.substvars
+debian/debhelper-build-stamp
+debian/files
+
