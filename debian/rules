@@ -37,6 +37,5 @@ include /usr/share/dpkg/default.mk
 override_dh_auto_install:
 	mkdir -p debian/tmp/
 	wget -O debian/tmp/vitexsoftware.gpg http://repo.vitexsoftware.com/keyring.gpg
-	sh -c 'echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg]  http://repo.vitexsoftware.cz  $$(lsb_release -sc) main" > debian/tmp/vitexsoftware.list'
 	sh -c 'echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg]  http://repo.vitexsoftware.com  $$(lsb_release -sc) main" | tee -a debian/tmp/vitexsoftware.list'
 	dh_auto_install
