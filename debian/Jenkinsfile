@@ -44,6 +44,7 @@ distributions.each {
             stage('Build ' + distribution) {
                 buildImage.inside {
                     sh 'dch -b -v ' + ver  + ' "' + env.BUILD_TAG  + '"'
+		    sh 'rm -f /etc/apt/sources.list.d/vitexsoftware.list'
                     sh 'sudo apt-get update'
                     sh 'sudo chown jenkins:jenkins ..'
                     sh 'debuild-pbuilder  -i -us -uc -b'
