@@ -1,8 +1,14 @@
-apt-repo-vitexsoftware (0.4.0) UNRELEASED; urgency=medium
+apt-repo-vitexsoftware (0.4.1) UNRELEASED; urgency=medium
+
+  * build fix
+
+ -- vitex <info@vitexsoftware.cz>  Fri, 12 Dec 2025 00:38:40 +0100
+
+apt-repo-vitexsoftware (0.4.0) Experimental; urgency=medium
 
   * new soures format used
 
- -- vitex <info@vitexsoftware.cz>  Thu, 11 Dec 2025 11:35:35 +0100
+ -- vitex <info@vitexsoftware.cz>  Fri, 12 Dec 2025 00:38:33 +0100
 
 apt-repo-vitexsoftware (0.3) Experimental; urgency=medium
 

@@ -24,8 +24,7 @@ case "$1" in
 
     case $(lsb_release -is) in
     Ubuntu|Debian|Raspbian)
-        wget -O /usr/share/keyrings/vitexsoftware.gpg http://repo.vitexsoftware.com/KEY.gpg
-        echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg] http://repo.vitexsoftware.com $(lsb_release -sc) main" > /etc/apt/sources.list.d/vitexsoftware.list
+    	sed -i "s/SUITE/$(lsb_release -sc)/" /etc/apt/sources.list.d/vitexsoftware.list
         ;;
 	*)
             echo "Unsupported distro $(lsb_release -is) " >&2
