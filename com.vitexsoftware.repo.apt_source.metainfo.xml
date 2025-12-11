@@ -14,10 +14,11 @@
   
   <description>
     <p>
-      APT source for software provided (not only) VitexSoftware
+      APT source for software provided by VitexSoftware.<br/>
+      Repository URL: <b>http://repo.vitexsoftware.com</b><br/>
+      GPG Key: <b>http://repo.vitexsoftware.com/KEY.gpg</b>
     </p>
   </description>
   
   <icon type="stock">apt-repo-vitexsoftware</icon>
 </component>
-
