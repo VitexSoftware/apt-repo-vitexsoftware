@@ -37,5 +37,5 @@ include /usr/share/dpkg/default.mk
 override_dh_auto_install:
 	mkdir -p debian/tmp/
 	wget -O debian/tmp/vitexsoftware.gpg http://repo.vitexsoftware.com/KEY.gpg
-	sh -c 'echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg]  http://repo.vitexsoftware.com  $$(lsb_release -sc) main" | tee -a debian/tmp/vitexsoftware.list'
+	sh -c 'sed "s/SUITE/$(lsb_release -sc)/" vitexsoftware.sources | tee -a debian/tmp/vitexsoftware.sources'
 	dh_auto_install

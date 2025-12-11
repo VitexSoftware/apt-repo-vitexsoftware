@@ -1,0 +1,12 @@
+Types: deb
+URIs: https://repo.vitexsoftware.com/
+Suites: SUITE
+Components: main  backports games
+Signed-By: /usr/share/keyrings/vitexsoftware.gpg
+
+Types: deb
+URIs: https://repo.vitexsoftware.com/
+Suites: borrow
+Components: main 
+Signed-By: /usr/share/keyrings/vitexsoftware.gpg
+

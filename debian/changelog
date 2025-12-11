@@ -1,4 +1,10 @@
-apt-repo-vitexsoftware (0.3) UNRELEASED; urgency=medium
+apt-repo-vitexsoftware (0.4.0) UNRELEASED; urgency=medium
+
+  * new soures format used
+
+ -- vitex <info@vitexsoftware.cz>  Thu, 11 Dec 2025 11:35:35 +0100
+
+apt-repo-vitexsoftware (0.3) Experimental; urgency=medium
 
   [ CyberVitexus ]
   * Icon and appstream metadata added
@@ -9,7 +15,7 @@ apt-repo-vitexsoftware (0.3) UNRELEASED; urgency=medium
   [ vitex ]
   * Static version of package
 
- -- vitex <info@vitexsoftware.cz>  Mon, 14 Feb 2022 02:59:11 +0100
+ -- vitex <info@vitexsoftware.cz>  Thu, 11 Dec 2025 11:35:18 +0100
 
 apt-repo-suryorg (0.1) Experimental; urgency=medium
 

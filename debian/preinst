@@ -1,0 +1,14 @@
+#!/bin/sh
+# preinst script for apt-repo-vitexsoftware
+# Removes old sources list before install/upgrade
+set -e
+
+case "$1" in
+    install|upgrade)
+        if [ -f /etc/apt/sources.list.d/vitexsoftware.list ]; then
+            rm -f /etc/apt/sources.list.d/vitexsoftware.list
+        fi
+        ;;
+esac
+
+#DEBHELPER#
