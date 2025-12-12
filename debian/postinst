@@ -24,7 +24,7 @@ case "$1" in
 
     case $(lsb_release -is) in
     Ubuntu|Debian|Raspbian)
-    	sed -i "s/SUITE/$(lsb_release -sc)/" /etc/apt/sources.list.d/vitexsoftware.list
+    	sed -i "s/SUITE/$(lsb_release -sc)/" /etc/apt/sources.list.d/vitexsoftware.sources
         ;;
 	*)
             echo "Unsupported distro $(lsb_release -is) " >&2

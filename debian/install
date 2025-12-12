@@ -1,4 +1,5 @@
 apt-repo-vitexsoftware.svg 			usr/share/icons/hicolor/scalable/apps
 com.vitexsoftware.repo.apt_source.metainfo.xml 	usr/share/metainfo/
 vitexsoftware.sources				etc/apt/sources.list.d/
-vitexsoftware.gpg				    usr/share/keyrings/
+vitexsoftware.gpg				usr/share/keyrings/
+
