@@ -21,19 +21,9 @@ set -e
 
 case "$1" in
     configure)
-
-    case $(lsb_release -is) in
-    Ubuntu|Debian|Raspbian)
-    	sed -i "s/SUITE/$(lsb_release -sc)/" /etc/apt/sources.list.d/vitexsoftware.sources
-        ;;
-	*)
-            echo "Unsupported distro $(lsb_release -is) " >&2
-	    exit 1
-        ;;
-    esac
-    # Update apt and handle conffile noninteractively
-    DEBIAN_FRONTEND=noninteractive apt-get update || true
-
+        CODENAME=$(lsb_release -sc)
+        sed -i "s/SUITE/$CODENAME/g" /etc/apt/sources.list.d/vitexsoftware.sources
+        DEBIAN_FRONTEND=noninteractive apt-get update || true
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
