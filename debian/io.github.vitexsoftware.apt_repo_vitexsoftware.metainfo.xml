@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.vitexsoftware.apt_repo_vitexsoftware</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>apt-repo-vitexsoftware</name>
+  <summary>apt sources for additional VitexSoftware packages</summary>
+  <description>
+    <p>
+      Add VitexSoftware debian repository into your Debian/Raspbian/Ubuntu
+    </p>
+  </description>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <url type="homepage">https://github.com/VitexSoftware/apt-repo-vitexsoftware</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/apt-repo-vitexsoftware/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>
