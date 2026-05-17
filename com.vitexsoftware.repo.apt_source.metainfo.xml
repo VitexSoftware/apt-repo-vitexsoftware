@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
   <id>com.vitexsoftware.repo.apt_source</id>
-  
-  <name>VitexSoftware &apos;s Debian repository</name>
-  <summary>Software mostly</summary>
-  
+
+  <name>VitexSoftware Debian Repository</name>
+  <summary>APT repository providing development tools, business applications, and system utilities</summary>
+
   <metadata_license>MIT</metadata_license>
   <project_license>AML</project_license>
-  
+
   <extends>
     <id>com.vitexsoftware.repo</id>
   </extends>
-  
+
+  <url type="homepage">https://repo.vitexsoftware.com/</url>
+
   <description>
     <p>
-      APT source for software provided by VitexSoftware.<br/>
-      Repository URL: <b>http://repo.vitexsoftware.com</b><br/>
-      GPG Key: <b>http://repo.vitexsoftware.com/KEY.gpg</b>
+      Official APT repository maintained by VitexSoftware, offering packages for Debian and Ubuntu distributions.
+    </p>
+    <p>
+      Supported distributions: Bookworm, Bullseye, Buster, Trixie, Focal, Jammy, Noble.
+    </p>
+    <p>Available components:</p>
+    <ul>
+      <li>main — core packages</li>
+      <li>backports — backported packages</li>
+      <li>borrowed — third-party redistributed packages</li>
+      <li>games — games and entertainment</li>
+      <li>paid — commercial packages</li>
+    </ul>
+    <p>
+      Notable software includes the AbrAFlexi accounting suite, Apache NetBeans, VSCodium, draw.io,
+      step-cli, Aptly, and various PHP libraries and system administration tools.
+    </p>
+    <p>
+      Repository URL: https://repo.vitexsoftware.com/
+      GPG key: https://repo.vitexsoftware.com/KEY.gpg
     </p>
   </description>
-  
+
   <icon type="stock">apt-repo-vitexsoftware</icon>
 </component>
