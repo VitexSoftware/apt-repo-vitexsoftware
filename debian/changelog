@@ -1,8 +1,11 @@
-apt-repo-vitexsoftware (0.4.2) UNRELEASED; urgency=medium
+apt-repo-vitexsoftware (0.4.3) Experimental; urgency=medium
 
-  * postinst update
+  * fix: correct postinst package name comment
+  * fix: remove stale metainfo XML from debian/
+  * fix: whitespace in vitexsoftware.sources Components fields
+  * docs: update README with HTTPS URLs and modern .sources format
 
- -- vitex <info@vitexsoftware.cz>  Thu, 18 Dec 2025 00:52:08 +0100
+ -- vitex <info@vitexsoftware.cz>  Sun, 17 May 2026 19:51:03 +0200
 
 apt-repo-vitexsoftware (0.4.1) Experimental; urgency=medium
 
