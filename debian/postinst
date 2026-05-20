@@ -5,24 +5,45 @@
 
 set -e
 
-# summary of how this script can be called:
-#        * <postinst> `configure' <most-recently-configured-version>
-#        * <old-postinst> `abort-upgrade' <new version>
-#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
-#          <new-version>
-#        * <postinst> `abort-remove'
-#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
-#          <failed-install-package> <version> `removing'
-#          <conflicting-package> <version>
-# for details, see http://www.debian.org/doc/debian-policy/ or
-# the debian-policy package
+. /usr/share/debconf/confmodule
 
 #DEBHELPER#
 
 case "$1" in
     configure)
         CODENAME=$(lsb_release -sc)
-        sed -i "s/SUITE/$CODENAME/g" /etc/apt/sources.list.d/vitexsoftware.sources
+        SOURCES=/etc/apt/sources.list.d/vitexsoftware.sources
+
+        db_get apt-repo-vitexsoftware/components
+        # debconf multiselect returns "main, backports, games" — convert to space-separated
+        COMPONENTS=$(echo "$RET" | sed 's/, / /g; s/,/ /g')
+
+        db_get apt-repo-vitexsoftware/borrow
+        BORROW="$RET"
+
+        > "$SOURCES"
+
+        if [ -n "$COMPONENTS" ]; then
+            cat >> "$SOURCES" <<EOF
+Types: deb
+URIs: https://repo.vitexsoftware.com/
+Suites: ${CODENAME}
+Components: ${COMPONENTS}
+Signed-By: /usr/share/keyrings/vitexsoftware.gpg
+EOF
+        fi
+
+        if [ "$BORROW" = "true" ]; then
+            [ -n "$COMPONENTS" ] && echo >> "$SOURCES"
+            cat >> "$SOURCES" <<EOF
+Types: deb
+URIs: https://repo.vitexsoftware.com/
+Suites: borrow
+Components: main ${CODENAME}-mained
+Signed-By: /usr/share/keyrings/vitexsoftware.gpg
+EOF
+        fi
+
         DEBIAN_FRONTEND=noninteractive apt-get update || true
     ;;
 
@@ -34,6 +55,5 @@ case "$1" in
         exit 1
     ;;
 esac
-
 
 exit 0

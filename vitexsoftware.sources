@@ -7,6 +7,6 @@ Signed-By: /usr/share/keyrings/vitexsoftware.gpg
 Types: deb
 URIs: https://repo.vitexsoftware.com/
 Suites: borrow
-Components: main
+Components: main SUITE-mained
 Signed-By: /usr/share/keyrings/vitexsoftware.gpg
 

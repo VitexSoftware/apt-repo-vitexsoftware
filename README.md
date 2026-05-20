@@ -4,6 +4,8 @@ VitexSoftware's repository source
 ![Logo](apt-repo-vitexsoftware.svg?raw=true)
 
 This package sets up the VitexSoftware APT repository on Debian/Ubuntu systems.
+During installation a dialog lets you choose which repository components to enable.
+Run `dpkg-reconfigure apt-repo-vitexsoftware` at any time to change your selection.
 
 ## Installation
 
@@ -24,12 +26,29 @@ echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg] https://repo.vitexso
 sudo apt update
 ```
 
-## Suites
+## Configuration
 
-| Suite    | Description                          |
-|----------|--------------------------------------|
-| stable   | Current Debian/Ubuntu codename       |
-| borrow   | Cross-release packages               |
+After installation, `/etc/apt/sources.list.d/vitexsoftware.sources` is generated
+from your selections. To change them:
+
+```shell
+sudo dpkg-reconfigure apt-repo-vitexsoftware
+```
+
+### Components
+
+| Component  | Description                                      |
+|------------|--------------------------------------------------|
+| main       | Core VitexSoftware packages                      |
+| backports  | Packages backported from newer Debian releases   |
+| games      | Game packages                                    |
+
+### Suites
+
+| Suite    | Description                                          |
+|----------|------------------------------------------------------|
+| *distro* | Current Debian/Ubuntu codename (e.g. `trixie`)       |
+| borrow   | Cross-release packages not tied to a specific suite  |
 
 ## Repository
 

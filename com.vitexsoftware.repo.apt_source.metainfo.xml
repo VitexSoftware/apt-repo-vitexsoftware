@@ -14,6 +14,11 @@
 
   <url type="homepage">https://repo.vitexsoftware.com/</url>
 
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+    <url>https://vitexsoftware.cz/</url>
+  </developer>
+
   <description>
     <p>
       Official APT repository maintained by VitexSoftware, offering packages for Debian and Ubuntu distributions.
@@ -32,10 +37,6 @@
     <p>
       Notable software includes the AbrAFlexi accounting suite, Apache NetBeans, VSCodium, draw.io,
       step-cli, Aptly, and various PHP libraries and system administration tools.
-    </p>
-    <p>
-      Repository URL: https://repo.vitexsoftware.com/
-      GPG key: https://repo.vitexsoftware.com/KEY.gpg
     </p>
   </description>
 

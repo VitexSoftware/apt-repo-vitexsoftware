@@ -1,0 +1,17 @@
+Template: apt-repo-vitexsoftware/components
+Type: multiselect
+Choices: main, backports, games
+Default: main, backports, games
+Description: VitexSoftware repository components to enable:
+ Select which components of the VitexSoftware APT repository to activate.
+ .
+  * main      — core VitexSoftware packages
+  * backports — packages backported from newer Debian releases
+  * games     — game packages
+
+Template: apt-repo-vitexsoftware/borrow
+Type: boolean
+Default: true
+Description: Enable the 'borrow' suite?
+ The borrow suite provides additional VitexSoftware packages that are not
+ tied to a specific Debian release codename.

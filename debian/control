@@ -8,6 +8,6 @@ Homepage: https://deb.sury.org/
 
 Package: apt-repo-vitexsoftware
 Architecture: all
-Depends: ${misc:Depends},bash|dash,apt
+Depends: ${misc:Depends},debconf (>= 0.5) | debconf-2.0,bash|dash,apt
 Description: apt sources for additional VitexSoftware packages
  Add VitexSoftware debian repository into your Debian/Raspbian/Ubuntu
