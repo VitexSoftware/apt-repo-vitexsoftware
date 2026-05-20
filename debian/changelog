@@ -1,3 +1,9 @@
+apt-repo-vitexsoftware (0.4.6) Experimental; urgency=medium
+
+  * feat: bundle vitexsoftware.gpg in source tree; remove wget from build
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 20 May 2026 02:03:38 +0200
+
 apt-repo-vitexsoftware (0.4.5) Experimental; urgency=medium
 
   * fix: borrow suite now includes ${CODENAME}-mained component (e.g. trixie-mained)

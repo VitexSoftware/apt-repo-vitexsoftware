@@ -36,5 +36,5 @@ include /usr/share/dpkg/default.mk
 
 override_dh_auto_install:
 	mkdir -p debian/tmp/
-	wget -O debian/tmp/vitexsoftware.gpg http://repo.vitexsoftware.com/KEY.gpg
+	cp vitexsoftware.gpg debian/tmp/vitexsoftware.gpg
 	dh_auto_install
